@@ -64,14 +64,38 @@ void problema2 (int dinero) {
     return resultados;*/
 };
 void problema4 (int num1, int num2){
-    int sumahora=0;
-    if (num1 and num2 != 0)
-        cout <<"ingresaste un numero incorrecto"<< endl;
-    else
-        sumahora = (num1 + num2) /24;;
+    int hora1 = 0;
+    int hora2=0;
+    int min1=0;
+    int min2=0;
+
+    hora1=num1/100;
+    hora2=num2/100;
+    min1=num1%100;
+    min2=num2 % 100;
+    /*cout << hora1<<hora2<<min1<<min2<<endl;*/
+
+    if  (hora1 && hora2 > 24){
+        cout << "Hora incorrecta "<<endl;
+    }
+    else if (min1 && min2>60){
+        cout << "Hora incorrecta "<<endl;
+    }
+    else {
+        int sumahora = hora1+hora2;
+        int sumamin = min1+min2;
+        if (sumamin>60){
+            sumahora = sumahora+1;
+            sumamin = sumamin - 60;
+            cout <<"La hora es : "<< sumahora<<sumamin<<endl;
+        }
+    }
+}
+
+void problema6 (int euler){
+    double resulteuler = 0;
 
 
 
-    cout << "La hora es "<<sumahora<<endl;
-
+cout <<": e es aproximadamente: "<< resulteuler <<endl;
 }

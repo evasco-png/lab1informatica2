@@ -17,6 +17,11 @@ int main(){
     cin >> num2;
     problema4(num1,num2);
 
+    int euler = 0;
+    cout << "ingresa el número de elementos aproximados para Euler" << endl;
+    cin >> euler;
+
+
     return 0;
 
 }
