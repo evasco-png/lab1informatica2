@@ -89,6 +89,9 @@ void problema4 (int num1, int num2){
             sumamin = sumamin - 60;
             cout <<"La hora es : "<< sumahora<<sumamin<<endl;
         }
+        else {
+           cout <<"La hora es : "<< sumahora<<sumamin<<endl;
+        }
     }
 }
 
@@ -105,6 +108,50 @@ void problema6 (int euler){
 cout <<":el numero *e* es aproximadamente: "<< resulteuler <<endl;
 };
 
-void problema8 (){
+void problema8 (int a, int b, int c){
+    int tamdea = (c-1)/a;
+    int tamdeb=(c-1)/b;
+    int multiplosa [tamdea];
+    int multiplosb [tamdeb];
+    int contadora = 0;
+    int contadorb = 0;
+    int sumatotal = 0;
 
+
+    for (int i = a; i <c; i=i+a ){
+        int suma = i;
+        multiplosa [contadora]=suma;
+        contadora = contadora + 1;
+        sumatotal = sumatotal + i;
+
+    }
+
+    for (int i = b; i<c; i=i+b){
+        int suma = i;
+        if (i%a!=0){
+        multiplosb [contadorb]=suma;
+        contadorb = contadorb + 1;
+        sumatotal = sumatotal + i;
+        }
+        else {
+        multiplosb [contadorb]=0;
+        contadorb = contadorb + 1;
+        }
+    }
+    /*
+    for (int i = 0; i < tamdea ; i++ ){
+        sumatotal= sumatotal + multiplosa[i];
+    }
+    for (int i = 0; i < tamdeb ; i++ ){
+        sumatotal= sumatotal + multiplosb[i];
+    }*/
+    for (int i = 0; i < tamdea ; i++ ){
+        int salida = 11 + i;
+        cout <<"M" << salida<<" + "  ;
+    }
+    for (int i = 0; i < tamdeb ; i++ ){
+        int salida = 21 + i;
+        cout <<"M" << salida <<" + " ;
+    }
+    cout <<"= " << sumatotal << endl;
 }
