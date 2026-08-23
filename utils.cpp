@@ -93,9 +93,18 @@ void problema4 (int num1, int num2){
 }
 
 void problema6 (int euler){
-    double resulteuler = 0;
+    double resulteuler = 1.0;
+    double diveuler = 0.0;
+
+    for (int i = 1; i < euler; i++ ){
+        diveuler = 1.0/i;
+        resulteuler = resulteuler+diveuler;
+    }
 
 
+cout <<":el numero *e* es aproximadamente: "<< resulteuler <<endl;
+};
 
-cout <<": e es aproximadamente: "<< resulteuler <<endl;
+void problema8 (){
+
 }
