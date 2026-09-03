@@ -100,13 +100,16 @@ void problema4 (int num1, int num2){
 void problema6 (int euler){
     double resulteuler = 1.0;
     double diveuler = 0.0;
+    double factorial = 1.0;
 
     for (int i = 1; i < euler; i++ ){
-        diveuler = 1.0/i;
+
+        factorial = factorial * i  ;
+        diveuler = 1.0/factorial;
         resulteuler = resulteuler+diveuler;
     }
 
-
+//
 cout <<":el numero *e* es aproximadamente: "<< resulteuler <<endl;
 };
 
